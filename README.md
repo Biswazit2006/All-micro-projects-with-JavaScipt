@@ -17,7 +17,7 @@ https://biswazit2006.github.io/All-micro-projects-with-JavaScipt/
 ## 📌 Quick preview
 - Clean dashboard page with cards for each tool  
 - Searchable tools list (search by name)  
-- Each tool lives in its own folder (`/text-modifier`, `/password-generator`, ইত্যাদি)  
+- Each tool lives in its own folder (`/text-modifier`, `/password-generator`, etc)  
 - Easily hostable via GitHub Pages
 
 ---
