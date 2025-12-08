@@ -1,46 +1,63 @@
-const textInput = document.getElementById('txtInput');
-// let textVar = textInput.value;
+// DOM Nodes
+const textInput = document.getElementById("txtInput");
+const preview = document.getElementById("preview");
+const textLength = document.getElementById("textLength");
+const popUp = document.getElementById("popUp")
+const popUpText = document.getElementById("popUpText")
+console.log(popUpText)
 
-let preview = document.getElementById('preview');
-let textDetails = document.getElementById('textLengt');
+// Popup Function
+function popupMsg(popupmsgtext){
+    popUpText.innerText = popupmsgtext;
+    popUp.style.display="flex";
+}
 
 // Buttons
-const copyBtn = document.getElementById('copyBtn')
-const upperCaseBtn = document.getElementById('upperCaseBtn');
-const LowerCaseBtn = document.getElementById('lowerCaseBtn');
+const copyBtn = document.getElementById("copyBtn");
+const upperCaseBtn = document.getElementById("upperCaseBtn");
+const lowerCaseBtn = document.getElementById("lowerCaseBtn");
 
-textInput.addEventListener('input',()=>{
-    let textVar = '';
-    textVar = textInput.value;
-    console.log(textVar)
-    
-    // Preview
-    preview.innerText = textVar;
-    // console.log(preview)
+// Input functionality
+textInput.addEventListener("input", () => {
+  console.log("ev");
+  popUp.style.display="none";
+  let textVar = '';
+  textVar = textInput.value;
+  // console.log(textVar)
 
-    // Text Details
-    let textLenth = textVar.length;
-    let word = textVar.toString().slice(" ");
-    // console.log(word)
+  // Preview
+  preview.innerText = textVar;
 
-    textDetails.innerText = `${textLenth} Character`
-    // console.log(textLenth)
+  // Text Length
+  let textLenthCount = textVar.length;
+  textLength.innerText = `${textLenthCount} Character`;
+  // console.log(textLenth)
 
-// Buttons 
-    // Coppy
-    copyBtn.addEventListener('click',()=>{
-        navigator.clipboard.writeText(textVar);
-    })
-    // UpperCase
-    upperCaseBtn.addEventListener('click',()=>{
-        textVar = textVar.toUpperCase();
-        textInput.value= textVar;
-    })
+  // Buttons action
+  copyBtn.addEventListener("click", copyBtnFunc);
+  upperCaseBtn.addEventListener("click", upperCasingBtnFunc);
+  lowerCaseBtn.addEventListener("click", lowerCasingBtnFunc);
 
-    // LowerCase
-    LowerCaseBtn.addEventListener('click',()=>{
-        textVar = textVar.toLowerCase();
-        textInput.value= textVar;
-    }) 
+  // Button Functionality
+  // Coppy
+  function copyBtnFunc() {
+    navigator.clipboard.writeText(textVar);
+    popupMsg("Topied!!");
+    console.log("Hit copy");
+  }
+  // UpperCase
+  function upperCasingBtnFunc() {
+    textVar = textVar.toUpperCase();
+    textInput.value = textVar;
+     popupMsg("Upper Case!!");
+    console.log("Hit UpperCAse")
+  }
 
+  // LowerCase
+  function lowerCasingBtnFunc() {
+    textVar = textVar.toLowerCase();
+    textInput.value = textVar;
+     popupMsg("Lower Case!!");
+    console.log("Hit lowerCase")
+  }
 });

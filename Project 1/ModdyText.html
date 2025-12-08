@@ -1,35 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="src/output.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ModdyText</title>
-</head>
-<body>
-    <nav class="bg-[#130f40] p-2 flex">
-        <h1 class="text-white text-2xl justify-start w-1/4 ">ModdyText</h1>
-        <ul class="text-white w-3/4 justify-end gap-5 flex">
-            <li class="">Home</li>
-            <li class="">About</li>
-        </ul>
+    <!-- Style -->
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <!-- NavBar -->
+    <nav class="nav-bar">
+      <h1 class="logo-text">ModdyText</h1>
+      <ul class="nav-ul">
+        <li class="nav-li nav-btn"><a href="../index.html">Home</a></li>
+        <li class="nav-li nav-btn"><a href="">About</a></li>
+      </ul>
     </nav>
-    <div class="bg-[#95afc0] h-auto py-10 flex flex-col">
-        <div class="flex w-[100%]">
-            <textarea name="Text" id="txtInput" class="sm:w-xl h-50 justify-center mx-auto bg-[#dff9fb] p-1 text-xl border-black border-2 rounded-xl  ">Enter Text Here</textarea>
-        </div>
-        <div class="flex w-[100%] justify-center mt-2.5 gap-3">
-            <button class="bg-[#4834d4] text-white px-5 py-1 rounded-md  hover:cursor-pointer " id="copyBtn">Copy</button>
-            <button class="bg-[#4834d4] text-white px-5 py-1 rounded-md  hover:cursor-pointer " id="upperCaseBtn" >Upper Case</button>
-            <button class="bg-[#4834d4] text-white px-5 py-1 rounded-md  hover:cursor-pointer " id="lowerCaseBtn" >Lower Case</button>
-        </div>
-        <div class="flex w-[100%] justify-center mt-2.5 gap-3">
-            <p id="textLengt" class="text-2xl font-bold">20 Character</p>
-        </div>
-        <div class="flex w-[100%] justify-center mt-2.5 gap-3 p-3">
-            <p id="preview"> preview</p>
-        </div>
+    <!-- Popup Section -->
+     <div class="popup-container" id="popUp">
+        <p class="popup-text" id="popUpText">PopUp!</p>
+     </div>
+    <!-- Main Section -->
+    <div class="main-container">
+        <!-- Input Section -->
+      <div class="input-container">
+        <textarea name="Text" id="txtInput" class="input-field" placeholder="Enter Text Here"></textarea>
+      </div>
+      <!-- Button Section -->
+      <div class="button-container">
+        <button class="action-btn" id="copyBtn">Copy</button>
+        <button class="action-btn" id="upperCaseBtn">Upper Case</button>
+        <button class="action-btn" id="lowerCaseBtn">Lower Case</button>
+      </div>
+      <!-- Info Section -->
+      <div class="info-container">
+        <p id="textLength" class="text-length">0 Character</p>
+      </div>
+      <!-- Previw Section -->
+      <div class="preview-container">
+        <p id="preview" class="preview-text">preview</p>
+      </div>
     </div>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
