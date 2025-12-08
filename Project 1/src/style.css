@@ -85,7 +85,7 @@ body {
   box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
 }
 
-/* Butoon container */
+/* Button container */
 .button-container {
   display: flex;
   flex-wrap: wrap;
@@ -111,7 +111,7 @@ body {
 .info-container {
   margin-top: 2rem;
 }
-.info-container .text-length {
+.info-container .text-info {
   font-size: 1.2rem;
   color: #333;
 }
@@ -130,7 +130,10 @@ body {
   white-space: pre-wrap;
 }
 
-/* Resposive Code */
+
+
+    /*---- Resposive Code ----*/
+
 @media (max-width: 1200px) {
   /* NavBar */
   .nav-bar .logo-text {
