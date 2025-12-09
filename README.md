@@ -6,8 +6,7 @@
 ---
 
 ## 🔗 Live Demo (Optional)
-Live (GitHub Pages):
-https://biswazit2006.github.io/All-micro-projects-with-JavaScipt/
+Live (GitHub Pages):https://biswazit2006.github.io/All-micro-projects-with-JavaScipt/
 
 
 
